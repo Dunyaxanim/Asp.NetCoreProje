@@ -1,0 +1,17 @@
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\BusinessLayer.deps.json
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\BusinessLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\ref\BusinessLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\BusinessLayer.pdb
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\DataAccessLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\EntityLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\DataAccessLayer.pdb
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\bin\Release\net5.0\EntityLayer.pdb
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.csproj.CopyComplete
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\ref\BusinessLayer.dll
+C:\Users\Dunya - PC\source\repos\CoreDemo4\BusinessLayer\obj\Release\net5.0\BusinessLayer.pdb

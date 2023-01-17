@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concreate
+@model List<Blog>
+
+<div class="card-body">
+    <h4 class="card-title">Project Status</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Ad </th>
+                    <th> Category </th>
+                    <th> Yaranma tarixi </th>
+                    <th> Detaylar </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var item in Model)
+                    {
+                        <td> 1 </td>
+                        <td>  @item.BlogTitle </td>
+                        <td>
+                            <label class="badge badge-gradient-success">@item.Category.CategoryName</label>
+                        </td>
+                        <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MM-yyyy"));</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </td>
+
+                        <td><a asp-controller="Blog" asp-action="BlogReadAll" asp-route-id="@item.BlogID" class="btn btn-info">Detaylar</a></td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

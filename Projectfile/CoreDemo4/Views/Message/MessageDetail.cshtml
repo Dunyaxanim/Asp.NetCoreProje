@@ -1,0 +1,44 @@
+﻿@model EntityLayer.Concreate.Message2
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Mesaj</h1>
+
+<h1>EditBlog</h1>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Düzenle</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Mövzu</label>
+                            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                            
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Mesaj</label>
+                            @Html.TextBoxFor(x => x.MessageDetails, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <a class="btn btn-primary submit mb-4" asp-action="MessageDetail"> Kad et</a>
+                    <p>
+                        <a href="#" id="btn1">Tüm kuralları kabul ediyorum</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <script>
+        $("#btn1").click(function () {
+            swal("Site kabul sartlari", "Butun sartlari kabul ediyorum!");
+        });
+    </script>
+</section>

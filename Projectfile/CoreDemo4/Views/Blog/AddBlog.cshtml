@@ -1,0 +1,75 @@
+﻿@model EntityLayer.Concreate.Blog
+@{
+    ViewData["Title"] = "AddBlog";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yeni Blog</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                @using (Html.BeginForm("AddBlog", "Blog", FormMethod.Post))
+                {
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Blog başlığı</label>
+                            @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.BlogTitle)
+                            @*<input type="text" class="form-control" id="validationDefault01" placeholder="" required="" name="WriteName">*@
+                        </div>
+                       
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label >Küçük görsel</label>
+                            @Html.TextBoxFor(x => x.BlogTumbnailImage, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.BlogTumbnailImage)
+
+                            @*<input type="text" class="form-control" id="password1" placeholder="" required="" name="WritePassvord">*@
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label >Görsel</label>
+                            @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.BlogImage)
+
+                            @*<input type="text" class="form-control" id="password1" placeholder="" required="" name="WritePassvord">*@
+                        </div>
+                       
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Blog İçeriyi</label>
+                            @Html.TextBoxFor(x => x.BlogContent, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.BlogContent)
+
+                            @*<input type="text" class="form-control" id="password1" placeholder="" required="" name="WritePassvord">*@
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Category</label>
+
+                            @Html.DropDownListFor(x => x.CategoryID,(List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CategoryID)
+
+                            @*<input type="text" class="form-control" id="password1" placeholder="" required="" name="WritePassvord">*@
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mb-4">Daxil et</button>
+                    <p>
+                        <a href="#" id="btn1">Tüm kuralları kabul ediyorum</a>
+                    </p> 
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <script>
+        $("#btn1").click(function () {
+            swal("Site kabul sartlari", "Butun sartlari kabul ediyorum!");
+        });
+    </script>
+</section>
+

@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concreate
+@model List<Message2>
+@{
+    ViewData["Title"] = "InBox";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<div>
+    <div class="page-header">
+        <h3 class="page-title"> Gələnlər qutusu</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+            </ol>
+        </nav>
+    </div>
+    <div>
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Basic Table</h4>
+                    <a asp-action="AddBlog" class="btn btn-primary">Yeni Blog yarat</a>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Mövzu</th>
+                                <th>Göndərən</th>
+                                <th>Tarix</th>
+                                <th>Mesajı aç</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th>@item.MessageID</th>
+                                    <td>@item.Subject</td>
+                                    <td>@item.SenderUser.WriterName</td>
+                                    <td>@(((DateTime)item.MessageDate).ToString("dd-MM-yyyy"));</td>
+                                    <td><a class="btn btn-info">Mesajı aç</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@*@section Scripts{
+        <script>
+            $('#modal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
+        </script>
+    }*@
+

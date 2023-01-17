@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ShowAllNotification";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>B ildirişlər</h1>
+
+@using EntityLayer.Concreate
+@model List<Notification>
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Bildirişlər</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.NotificationID</th>
+            <td>@item.NotificationType</td>
+
+            <td>@(((DateTime)item.NotificationDate).ToString("dd-MM-yyyy"));</td>
+
+            <td>
+                @if (!item.NotificationStatus)
+                {
+                    <span class="text-success">Oxundu</span>
+                }
+                else
+                {
+                    <span class="text-danger">Aktiv</span>
+                }
+            </td>
+        </tr>
+    }
+</table>

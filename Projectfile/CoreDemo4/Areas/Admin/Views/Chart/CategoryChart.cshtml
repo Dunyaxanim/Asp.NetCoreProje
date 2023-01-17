@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "CategoryChart";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin2Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Pie Chart Example</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="flot-chart">
+                    <div class="flot-chart-pie-content" id="flot-pie-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts{
+
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.time.js"></script>
+
+    <!-- Flot demo data -->
+    <script src="~/inspinia-gh-pages/js/demo/flot-demo.js"></script>
+}

@@ -1,0 +1,16 @@
+﻿@model CoreDemo4.Controllers.Class1
+
+@{
+    ViewData["Title"] = "UpdateEmployee";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin2Layout.cshtml";
+}
+
+<h1>UpdateEmployee</h1>
+
+<form method="post">
+    <label> ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <label>Ad/Soyad</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <button class="btn btn-outline-success">Təsdiq et</button>
+</form>

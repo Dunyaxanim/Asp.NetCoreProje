@@ -1,0 +1,105 @@
+﻿@using EntityLayer.Concreate
+@model List<Blog>
+@{
+    ViewData["Title"] = "BlaogListByWriter";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<div>
+    <div class="page-header">
+        <h3 class="page-title"> Basic Tables </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+            </ol>
+        </nav>
+    </div>
+    <div>
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Basic Table</h4>
+                    <a asp-action="AddBlog" class="btn btn-primary">Yeni Blog yarat</a>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>BlogID</th>
+                                <th>Başlık</th>
+                                <th>Yaranma tarihi</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th>@item.BlogID</th>
+                                    <td>@item.BlogTitle</td>
+                                    <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MM-yyyy"));</td>
+                                    <td>@item.Category.CategoryName</td>
+                                    <td>
+                                        @if (!item.BlogStatus)
+                                        {
+                                            <span class="text-success">Aktiv</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-danger">Deaktiv</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (!item.BlogStatus)
+                                        {
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#d-@item.BlogID" asp-route-id="@item.BlogID">
+                                                Sil
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="d-@item.BlogID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Blog silmək</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h4>Bu blog'u silmək istediyinizə əminmisiniz?</h4>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                                                            <a asp-action="DeletBlog" asp-route-id="@item.BlogID" class="btn btn-danger">Sil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </td>
+
+                                    <td><a asp-action="EditBlog" class="btn btn-info" asp-route-id="@item.BlogID">Düzenle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@*@section Scripts{
+        <script>
+            $('#modal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
+        </script>
+    }*@

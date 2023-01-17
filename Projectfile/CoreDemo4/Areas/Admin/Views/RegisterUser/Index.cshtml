@@ -1,0 +1,87 @@
+﻿@model SignUpVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPINIA | Register</title>
+    <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/font-awesome.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/animate.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+                <h3 class="logo-name">IN+</h3>
+            </div>
+            <h3> @ViewBag.email0</h3>
+            <h3> @ViewBag.email1</h3>
+           
+            <p>Hesab yaradın</p>
+            <form class="m-t" role="form" asp-action="Index" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger">
+
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="@Model.NameSurname" placeholder="Ad Soyad" required="">
+                    <span asp-validation-for="@Model.NameSurname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" required="" asp-for="@Model.UserName">
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="İstifadəçi adı" required="" asp-for="@Model.Mail">
+                    <span asp-validation-for="@Model." class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Şifrə" required="" asp-for="@Model.Password">
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Təkrar şifrə" required="" asp-for="@Model.ConfirmPassword">
+                    <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> İstifadə şərtlərini qəbul edirəm </label></div>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b" asp-action="Index">Register</button>
+
+                <p class="text-muted text-center"><small>Artıq bir hesabınız mövcuddur?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="login.html">Daxil ol</a>
+            </form>
+            <p class="m-t"> <small>Asp.Net Core 5.0 | Bütün məlumatlar gizli saxlanılır | @DateTime.Now.Year</small> </p>
+        </div>
+    </div>
+    @section Scripts{
+        <!-- Mainly scripts -->
+        <script src="~/inspinia-gh-pages/js/jquery-3.1.1.min.js"></script>
+        <script src="~/inspinia-gh-pages/js/popper.min.js"></script>
+        <script src="~/inspinia-gh-pages/js/bootstrap.js"></script>
+        <!-- iCheck -->
+        <script src="~/inspinia-gh-pages/js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
+
+    }
+</body>
+
+</html>
+
