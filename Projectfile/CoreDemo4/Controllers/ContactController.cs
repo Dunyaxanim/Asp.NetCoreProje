@@ -12,7 +12,7 @@ namespace CoreDemo4.Controllers
     public class ContactController : Controller
     {
         ContactManager contactManager = new ContactManager(new EfContactFrameWork());
-
+        
         public IActionResult Index()
         {
 

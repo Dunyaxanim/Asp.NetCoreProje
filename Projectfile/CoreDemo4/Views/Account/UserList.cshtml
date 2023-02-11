@@ -1,0 +1,55 @@
+﻿
+@model List<UserVM>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Kullanıcı listesi</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ad</th>
+                                <th>Soyad</th>
+                                <th>Kullanıcı adı</th>
+                                <th>E-posta adresi</th>
+                                <th>Rolü</th>
+                                <th>Funksiyalar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Name</td>
+
+                                    <td>@item.Surname</td>
+                                    <td>@item.Username</td>
+
+                                    <td>@item.Email</td>
+
+                                    <td class="text-success"> @item.Role </td>
+                                    
+                                    <td>
+                                        <a asp-action="ChangeRole" asp-route-id="@item.Id" class="btn btn-primary" style="color:white !important">Rolünü Deyiş</a>
+                                        @*<a asp-action="Delete" asp-route-id="item.Id" class="btn btn-danger" style="color:white !important">Deaktiv</a>*@
+                                        <a asp-action="UpdateUser" asp-route-id="@item.Id" class="btn btn-info" style="color:white !important">Deyiş</a>
+                                        <a asp-action="ResetPassword" asp-route-id="@item.Id"  asp-route-token="@item." class="btn btn-warning" style="color:white !important">Parola deyiş</a>
+                                        @*if (User.IsInRole("SuperAdmin"))*@
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

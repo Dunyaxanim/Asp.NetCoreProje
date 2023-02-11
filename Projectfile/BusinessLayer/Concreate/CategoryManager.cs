@@ -21,44 +21,38 @@ namespace BusinessLayer.Concreate
 
         public Category TGetById(int id)
         {
-            
             return _categoryDal.GetById(id);
         }
 
 
         public List<Category> GetList()
         {
-           
-           return _categoryDal.GetListAll();
+            return _categoryDal.GetListAll();
         }
 
         public void TAdd(Category t)
         {
-            
             _categoryDal.Insert(t);
         }
 
         public void TDelet(Category t)
         {
-            
             _categoryDal.Delete(t);
         }
 
         public void TUpdate(Category t)
         {
-            
             _categoryDal.Update(t);
         }
 
         public int TGetCount()
         {
-
             return _categoryDal.GetCount();
         }
 
         //public int TGetCount(Category t)
         //{
-        //    return _categoryDal.GetCount(t);
+        //   return _categoryDal.GetCount(t);
         //}
     }
 }

@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "GetControllers";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin2Layout.cshtml";
+}
+
+
+@foreach (var item in ViewBag.ControllerList)
+{
+    <h3>@item</h3>
+}

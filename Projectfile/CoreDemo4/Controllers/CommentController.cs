@@ -12,6 +12,7 @@ namespace CoreDemo4.Controllers
     public class CommentController : Controller
     {
         CommentManager cm = new CommentManager(new EfCommentRepository());
+        BlogManager bm = new BlogManager(new EfBlogRepository());
 
         public IActionResult Index()
         {
@@ -23,12 +24,13 @@ namespace CoreDemo4.Controllers
             return PartialView();
         }
         [HttpPost]
-        public IActionResult PartialAddComment(Comment comment)
+        public IActionResult PartialAddComment(Comment comment,int id)
         {
+            var values = bm.GetBlogByID(id).FirstOrDefault();
             comment.CommentDate = DateTime.Parse(DateTime.Now.ToShortTimeString());
             comment.CommentStatus = true;
-            comment.BlogID = 2008;
-            cm.TAdd(comment);
+            comment.BlogID = id;
+            cm.CommentAdd(comment);
             return RedirectToAction("Index", "Blog");
         }
 

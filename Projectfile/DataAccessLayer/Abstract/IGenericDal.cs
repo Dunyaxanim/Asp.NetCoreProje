@@ -16,5 +16,6 @@ namespace DataAccessLayer.Abstract
         List<T> GetListAll(Expression<Func<T, bool>> filter);
         T GetById(int id); 
         int GetCount(); 
+        int GetCount(int id); 
     }
 }

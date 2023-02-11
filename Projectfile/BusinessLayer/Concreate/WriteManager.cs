@@ -24,13 +24,11 @@ namespace BusinessLayer.Concreate
 
         public List<Writer> GetWriterById(int id)
         {
-         
             return _writeDal.GetListAll(x => x.WriterID == id);
         }
 
         public void TAdd(Writer t)
         {
-          
             _writeDal.Insert(t);
         }
 
@@ -41,7 +39,6 @@ namespace BusinessLayer.Concreate
 
         public Writer TGetById(int id)
         {
-            
             return _writeDal.GetById(id);
         }
 
@@ -52,8 +49,10 @@ namespace BusinessLayer.Concreate
 
         public void TUpdate(Writer t)
         {
-          
             _writeDal.Update(t);
         }
+
+     
+
     }
 }

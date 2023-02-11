@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yjcr9nFUtNu3snE8Ncjp8BSx1xO8CpIH82DKIQv5ZuoEeUW1K7aSc5kZ1b/ghTThbQikkbu5FbCfxpmG7p9lHA==",
+  "dgSpecHash": "mDao4AOdXY2AyU1TXryNp0P3ahgySMVChIV75oi2h02VyQv2Hp5V+ZikYg+i9vJ3yUHN0I0QRPkmzxgTjjdUHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

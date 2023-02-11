@@ -18,7 +18,6 @@ namespace BusinessLayer.Concreate
         }
         public List<Notification> GetList()
         {
-        
             return _notificationDal.GetListAll();
         }
 

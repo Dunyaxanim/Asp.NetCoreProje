@@ -84,7 +84,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--//header-->
     <!--//banner-->
     <!--/main-->
-    @RenderBody();
+    @*<main>*@
+        @*@if (TempData["message"]!=null)
+        {
+
+        }*@
+        @RenderBody();
+    @*</main>*@
+   
     <!--//main-->
     <!--footer-->
     @await Html.PartialAsync("Partial3");

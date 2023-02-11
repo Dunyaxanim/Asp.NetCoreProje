@@ -13,8 +13,8 @@ namespace CoreDemo4.ViewComponents.Blog
         BlogManager cm = new BlogManager(new EfBlogRepository());
         public IViewComponentResult Invoke(int id)
         {
-            var value = cm.GetBlogListByWriter(id);
-            return View(value);
+            //var value = cm.GetBlogListByWriter(id);
+            return View(/*value*/);
         }
     }
 }

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>EditBlog</h1>
+
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -14,47 +14,53 @@
         <h3 class="tittle">Düzenle</h3>
         <div class="inner-sec">
             <div class="login p-5 bg-light mx-auto mw-100">
-                @using (Html.BeginForm("EditBlog", "Blog", FormMethod.Post))
-                {
+                <form method="post" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Blog başlığı</label>
-                            @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.BlogTitle)
+                            <input type="text" class="form-control" id="password1" placeholder="" required="" asp-for="@Model.BlogTitle">
+                           
                         </div>
 
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Küçük görsel</label>
-                            @Html.TextBoxFor(x => x.BlogTumbnailImage, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.BlogTumbnailImage)
+                            <input type="text" class="form-control" id="password1" placeholder="" required="" asp-for="@Model.BlogTumbnailImage">
+                          
                         </div>
                         <div class="form-group col-md-6">
                             <label>Görsel</label>
-                            @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.BlogImage)
+                            <input type="text" class="form-control" id="password1" placeholder="" required="" asp-for="@Model.BlogImage">
+                          
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword1 mb-2">Blog İçeriyi</label>
-                            @Html.TextBoxFor(x => x.BlogContent, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.BlogContent)
+                          
+                            <input type="text" class="form-control" id="password1" placeholder="" required="" asp-for="@Model.BlogContent">
+                           
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="exampleInputPassword1 mb-2">Category</label>
-
-                            @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.CategoryID)
+                     
+                        <div class="form-group " id="maindepartment">
+                            <label>Kategori</label>
+                            <select class="form-control" name="categoryid">
+                                @foreach (Category category in ViewBag.category)
+                                {
+                                    <option value="@category.CategoryID">@category.CategoryName</option>
+                                }
+                            </select>
                         </div>
-
                     </div>
-                    <button  class="btn btn-primary submit mb-4">Kad et</button>
+                    <button class="btn btn-primary submit mb-4">Kad et</button>
                     <p>
                         <a href="#" id="btn1">Tüm kuralları kabul ediyorum</a>
                     </p>
-                }
-            </div>
+                    
+
+                    </form>
+                    </div>
+
         </div>
     </div>
     <br />

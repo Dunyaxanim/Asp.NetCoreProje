@@ -10,7 +10,7 @@ namespace CoreDemo4.ViewComponents.Writer
 {
     public class WriterNotgication : ViewComponent
     {
-        NotificationManager nm = new NotificationManager(new EfNotificationRepository());
+       NotificationManager nm = new NotificationManager(new EfNotificationRepository());
         public IViewComponentResult Invoke()
         {
             ViewBag.ShowNotification = nm.GetList();

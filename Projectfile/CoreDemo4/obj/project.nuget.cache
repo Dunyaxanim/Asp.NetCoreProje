@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oMAjPCVQsYR+NIZhD5goy8l1f9wylkrt80nfhNb3Eet+KBsR9GkBQ9ldV1tmHHR0mcZ1isU2Tgjf4ZNJmKRgsA==",
+  "dgSpecHash": "MukCLIXThensbfBgCvcKDiaGXTwQ//peC7nTqztEpar5Y8qECqFZqK1ry919C6ACNWtwF4Jpzl4u6JHwwgjyag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\CoreDemo4.csproj",
+  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\CoreDemo4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\fluentvalidation\\5.6.2\\fluentvalidation.5.6.2.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -82,6 +82,8 @@
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Dunya - PC\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512",
+    "C:\\Users\\Dunya - PC\\.nuget\\packages\\pagedlist.mvc\\4.5.0\\pagedlist.mvc.4.5.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
@@ -173,6 +175,26 @@
       "warningLevel": 1,
       "message": "Package 'FluentValidation 5.6.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "FluentValidation",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList.Mvc",
       "targetGraphs": [
         "net5.0"
       ]

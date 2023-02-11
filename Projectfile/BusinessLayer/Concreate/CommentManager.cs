@@ -18,13 +18,11 @@ namespace BusinessLayer.Concreate
         }
         public void CommentAdd(Comment comment)
         {
-           
-            _commentdal.Insert(comment);
+             _commentdal.Insert(comment);
         }
 
         public List<Comment> GetList(int id)
         {
-            
             return _commentdal.GetListAll(x => x.BlogID == id);
 
         }

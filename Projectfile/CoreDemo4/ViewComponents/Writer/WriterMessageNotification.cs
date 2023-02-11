@@ -14,7 +14,7 @@ namespace CoreDemo4.ViewComponents.Writer
 
         public IViewComponentResult Invoke()
         {
-            int id = 5;
+            int id= 5;
             ViewBag.CountofMessage = message2Manager.TGetCount();
             var value = message2Manager.GetInboxListByWriter(id);
             return View(value);

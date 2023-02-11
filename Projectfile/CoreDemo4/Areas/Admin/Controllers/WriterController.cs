@@ -23,7 +23,6 @@ namespace CoreDemo4.Areas.Admin.Controllers
         {
             var jsonWriter = JsonConvert.SerializeObject(writers);
             return Json(jsonWriter);
-        
         }
 
         #endregion
@@ -34,7 +33,6 @@ namespace CoreDemo4.Areas.Admin.Controllers
             var finderWriter = writers.FirstOrDefault(x => x.Id == writerid);
             var jsonWriter = JsonConvert.SerializeObject(finderWriter);
             return Json(jsonWriter);
-          
         }
         #endregion
 
@@ -44,30 +42,26 @@ namespace CoreDemo4.Areas.Admin.Controllers
             writers.Add(w);
             var jsonWriter = JsonConvert.SerializeObject(w);
             return Json(jsonWriter);
-       
         }
         #endregion
 
         #region DeletWriter
         public IActionResult DeletWriter(int id)
         {
-            var writer = writers.FirstOrDefault(x => x.Id == id);
+           var writer= writers.FirstOrDefault(x=>x.Id == id);
             writers.Remove(writer);
-            return Json(writer);
-           
+           return Json(writer);
         }
 
         #endregion
 
-
         #region UpdateWriter
         public IActionResult UpdateWriter(WriterClass w)
         {
-            //var writer = writers.FirstOrDefault(x => x.Id == w.Id);
-            //writer.Name = w.Name;
-            //var jsonWriter = JsonConvert.SerializeObject(w);
-            //return Json(jsonWriter);
-            return View();
+            var writer = writers.FirstOrDefault(x => x.Id == w.Id);
+            writer.Name = w.Name;
+            var jsonWriter = JsonConvert.SerializeObject(w);
+            return Json(jsonWriter);
         }
 
         #endregion

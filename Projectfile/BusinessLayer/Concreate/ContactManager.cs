@@ -39,7 +39,6 @@ namespace BusinessLayer.Concreate
 
         public int TGetCount()
         {
-            
             return _contactDal.GetCount();
         }
 

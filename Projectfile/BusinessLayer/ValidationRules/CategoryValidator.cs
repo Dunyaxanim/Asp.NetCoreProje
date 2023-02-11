@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Concreate;
-//using DataAccessLayer.EntityFramework;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concreate;
 using FluentValidation;
 using System;
@@ -17,9 +17,9 @@ namespace BusinessLayer.ValidationRules
        
         public CategoryValidator()
         {
-            //RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Katqoriya adını daxil edin! ");
-            //RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Katqoriya detaylarını daxil edin! ");
-            //RuleFor(x => x.CategoryName).Length(5, 50).WithMessage("Katqoriya adnını 4 hərfdən aşağı 50 hərfdən yuxarı yazmayın! ");
+            RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Katqoriya adını daxil edin! ");
+            RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Katqoriya detaylarını daxil edin! ");
+            RuleFor(x => x.CategoryName).Length(5, 50).WithMessage("Katqoriya adnını 4 hərfdən aşağı 50 hərfdən yuxarı yazmayın! ");
             //RuleFor(x => x.CategoryName).Matches(CategoryName).WithMessage("Bu adda bir Katqoriya var. Yeni bir ad daxil edin!");
         }
     }

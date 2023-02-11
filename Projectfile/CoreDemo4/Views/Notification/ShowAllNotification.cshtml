@@ -4,14 +4,14 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>B ildirişlər</h1>
+<h1>Bildirimler</h1>
 
 @using EntityLayer.Concreate
 @model List<Notification>
 <table class="table">
     <tr>
         <th>#</th>
-        <th>Bildirişlər</th>
+        <th>Bildirimler</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -24,11 +24,11 @@
             <td>
                 @if (!item.NotificationStatus)
                 {
-                    <span class="text-success">Oxundu</span>
+                    <span class="text-success">Okundu</span>
                 }
                 else
                 {
-                    <span class="text-danger">Aktiv</span>
+                    <span class="text-danger">Aktif</span>
                 }
             </td>
         </tr>

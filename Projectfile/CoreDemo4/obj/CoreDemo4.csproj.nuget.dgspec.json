@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\CoreDemo4.csproj": {}
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\CoreDemo4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj",
         "projectName": "BlogAPIDemo",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -119,11 +119,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -162,14 +162,14 @@
         }
       }
     },
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\CoreDemo4.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\CoreDemo4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\CoreDemo4.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\CoreDemo4.csproj",
         "projectName": "CoreDemo4",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\CoreDemo4.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\CoreDemo4.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreDemo4\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreDemo4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -190,17 +190,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj"
               },
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -282,14 +282,14 @@
         }
       }
     },
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -310,8 +310,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -353,6 +353,10 @@
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "PagedList.Mvc": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [
@@ -374,14 +378,14 @@
         }
       }
     },
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y4brEB15IX/mvzQUf5//112mL2rMhiVp4lJG+a0+LKIGp7oX8Ew7XdspN+Leey7K3OfTJ6ziyBY1uOXeApl/7A==",
+  "dgSpecHash": "yFDyErBqRUMm4FcLkZ/lduzGwPPGwKimP3GLJab/WHQabCqqhVktBt3zfruF0Ne1v0GngiJ2BQFgMI2/wZdIjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\CoreLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

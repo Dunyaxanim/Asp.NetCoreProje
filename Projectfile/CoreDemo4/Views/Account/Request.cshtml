@@ -1,0 +1,52 @@
+﻿@model ResetPasswordModel
+@{
+    ViewData["Title"] = "Request";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+
+@*<h2>Password Reset Request</h2>
+
+@using (Html.BeginForm("Request", "PasswordReset", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Passwords)
+        @Html.TextBoxFor(m => m.Passwords)
+        @Html.ValidationMessageFor(m => m.Passwords)
+    </div>
+
+    <button type="submit">Submit</button>
+}*@
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <div class="row inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1 mb-2">Şifre</label>
+                        <input type="password" class="form-control" placeholder="" required="" name="Passwords">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1 mb-2"> Tekrar şifre </label>
+                        <input type="password" class="form-control" placeholder="" required="" name="ConfirmPassword">
+                    </div>
+                    @*@if (Input.Password != Input.ConfirmPassword)
+                    {
+                        <div class="alert alert-danger">
+                            Passwords do not match.
+                        </div>
+                    }*@
+                    <button asp-controller="Account" asp-action="Request" type="submit" class="btn btn-primary submit mb-4">Onayla</button>
+                    <p><a asp-controller="Dashboard" asp-action="Index">Geri dön</a></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

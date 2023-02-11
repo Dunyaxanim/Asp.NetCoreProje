@@ -1,0 +1,40 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+
+
+<section class="main-content-w3layouts-agileits">
+
+    <div class="container">
+        <h3 class="tittle">Giriş yap</h3>
+        <div class="row inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <div asp-validation-summary="ModelOnly" class="text-danger">
+
+                </div>
+                <form method="post" asp-action="Login" asp-controller="Account">
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1 mb-2">E-posta adresiniz</label>
+                            <input type="email" class="form-control" placeholder="" required="" name="Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1 mb-2">Şifre </label>
+                            <input type="password" class="form-control" placeholder="" required="" name="Password">
+                        </div>
+                        <button asp-controller="Account" asp-action="Login" type="submit" class="btn btn-primary submit mb-4">Giriş yap</button>
+                        <p><a asp-controller="Register" asp-action="Index">Hesab ekleyin.</a></p>
+                        <p><a asp-controller="Account" asp-action="ForgotPassword">Şifreyi unuttdum</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

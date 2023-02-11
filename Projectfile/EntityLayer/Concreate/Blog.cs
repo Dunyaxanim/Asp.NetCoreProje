@@ -20,8 +20,10 @@ namespace EntityLayer.Concreate
         public int CategoryID { get; set; }
         public int BlogScore { get; set; }
         public Category Category { get; set; }
-        public int WriterID { get; set; }
-        public Writer Writer { get; set; }
+        //public int WriterID { get; set; }
+        //public Writer Writer { get; set; }
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
         public List<Comment> Comments { get; set; }
     }
 }

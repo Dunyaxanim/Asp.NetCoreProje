@@ -1,4 +1,5 @@
 using BlogAPIDemo.DataAccessLayer;
+using CoreDemo4.EmailServices;
 using DataAccessLayer.Concrete;
 using EntityLayer.Concreate;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,30 +16,43 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 namespace CoreDemo4
 {
     public class Startup
     {
+
+        private IConfiguration _configuration;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
+        //IConfiguration Configuration = new ConfigurationBuilder()
+        //              .AddJsonFile("appsettings.json")
+        //              .Build();
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
             services.AddDbContext<Context>();
+
             services.AddIdentity<AppUser, AppRole>(x =>
             {
                 x.Password.RequireUppercase = false;
                 x.Password.RequireNonAlphanumeric = false;
+                x.SignIn.RequireConfirmedEmail = true;
+                x.User.RequireUniqueEmail = true;
+                x.SignIn.RequireConfirmedPhoneNumber = false;
+            }).AddDefaultTokenProviders().AddEntityFrameworkStores<Context>();
+            
+            services.AddSingleton(_configuration);
+            services.AddScoped<IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
 
-            }
-                ).AddEntityFrameworkStores<Context>();
-            services.AddControllersWithViews();
+                   _configuration["EmailSender:Host"],
+                   _configuration.GetValue<int>("EmailSender:Port"),
+                   _configuration.GetValue<bool>("EmailSender:EnableSSL"),
+                   _configuration["EmailSender:UserName"],
+                   _configuration["EmailSender:Password"]));
             services.AddSession();
             services.AddMvc(config =>
             {
@@ -52,17 +67,16 @@ namespace CoreDemo4
                 CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(x =>
                 {
-                    x.LoginPath = "/Login/Index";
+                    x.LoginPath = "/Account/Login";
                 }
                 );
             services.ConfigureApplicationCookie(options =>
             {
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromSeconds(5);
-                options.LoginPath = "/Login/Index/";
+                options.LoginPath = "/Account/Login/";
                 options.SlidingExpiration = true;
             });
-
         }
 
 
@@ -85,9 +99,8 @@ namespace CoreDemo4
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseSession();
-            app.UseAuthentication();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

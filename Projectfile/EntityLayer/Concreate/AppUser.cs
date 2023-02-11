@@ -9,8 +9,11 @@ namespace EntityLayer.Concreate
 {
    public  class AppUser:IdentityUser<int>
     {
-        public string NamgeSurname { get; set; }
-        public string ImgUrl { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string About { get; set; }
+        public List<Blog> Blogs { get; set; }
+        public List<Comment> Comments { get; set; }
 
     }
 }

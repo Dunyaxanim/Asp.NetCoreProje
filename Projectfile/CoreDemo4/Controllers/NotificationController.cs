@@ -18,27 +18,26 @@ namespace CoreDemo4.Controllers
             var value = writeManager.GetList();
             return View(value);
         }
-        //public static string TimeDifference(DateTime startDate, DateTime endDate)
-        //{
-        //    //var differenceInterval = string.Empty;
-        //    //if (endDate.Subtract(startDate).Hours > 0)
-        //    //{
-        //    //    var differenceHour = endDate.Subtract(startDate).Hours;
-        //    //    differenceInterval = differenceHour + " Saat ";
-        //    //}
-        //    //if (endDate.Subtract(startDate).Minutes > 0)
-        //    //{
-        //    //    var differenceMinute = endDate.Subtract(startDate).Minutes;
-        //    //    differenceInterval += differenceMinute + " Dakika ";
-        //    //}
-        //    //if (endDate.Subtract(startDate).Seconds > 0)
-        //    //{
-        //    //    var differenceSecond = endDate.Subtract(startDate).Seconds;
-        //    //    differenceInterval += differenceSecond + " Saniye";
-        //    //}
+        public static string TimeDifference(DateTime startDate, DateTime endDate)
+        {
+            var differenceInterval = string.Empty;
+            if (endDate.Subtract(startDate).Hours > 0)
+            {
+                var differenceHour = endDate.Subtract(startDate).Hours;
+                differenceInterval = differenceHour + " Saat ";
+            }
+            if (endDate.Subtract(startDate).Minutes > 0)
+            {
+                var differenceMinute = endDate.Subtract(startDate).Minutes;
+                differenceInterval += differenceMinute + " Dakika ";
+            }
+            if (endDate.Subtract(startDate).Seconds > 0)
+            {
+                var differenceSecond = endDate.Subtract(startDate).Seconds;
+                differenceInterval += differenceSecond + " Saniye";
+            }
 
-        //    //return differenceInterval;
-        //    return startDate;
-        //}
+            return differenceInterval;
+        }
     }
 }

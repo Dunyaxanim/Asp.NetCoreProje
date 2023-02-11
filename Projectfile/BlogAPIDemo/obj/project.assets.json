@@ -5986,11 +5986,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj",
+      "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj",
       "projectName": "BlogAPIDemo",
-      "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj",
+      "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj",
       "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\obj\\",
+      "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

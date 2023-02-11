@@ -17,7 +17,7 @@ namespace CoreDemo4.Controllers
 {
 
     public class WriterController : Controller
-    {
+    { 
 
         WriteManager writeManager = new WriteManager(new EfWriterRepository());
         [Authorize]
@@ -68,7 +68,7 @@ namespace CoreDemo4.Controllers
             var writerID = c.Writers.Where(x => x.WriterMail ==
             usermail).Select(y => y.WriterID).FirstOrDefault();
             var values = writeManager.TGetById(writerID);
-
+            
             return View(values);
         }
 
@@ -98,9 +98,18 @@ namespace CoreDemo4.Controllers
             }
             return View(values);
         }
-        #endregion
-       
 
+        #region MyRegion
+
+
+        #region MyRegion
+
+        #endregion
+        #region MyRegion
+
+        #endregion
+        #endregion
+        #endregion
 
         #region AddWriter
         [AllowAnonymous]
@@ -116,7 +125,7 @@ namespace CoreDemo4.Controllers
             Writer w = new Writer();
 
             //if (result.IsValid)
-            //{ }
+            //{}
             if (p.WriterIFormFile != null)
             {
                 var extestion = Path.GetExtension(p.WriterIFormFile.FileName);

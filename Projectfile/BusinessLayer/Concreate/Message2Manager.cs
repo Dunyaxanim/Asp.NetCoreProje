@@ -18,13 +18,11 @@ namespace BusinessLayer.Concreate
         }
         public List<Message2> GetInboxListByWriter(int id)
         {
-            
             return _message2Dal.GetListMessageByWriter(id);
         }
 
         public List<Message2> GetList()
         {
-            
             return _message2Dal.GetListAll();
         }
 
@@ -45,7 +43,6 @@ namespace BusinessLayer.Concreate
 
         public Message2 TGetById(int id)
         {
-            
             return _message2Dal.GetById(id);
         }
 

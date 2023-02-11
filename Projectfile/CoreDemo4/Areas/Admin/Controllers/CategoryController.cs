@@ -22,6 +22,7 @@ namespace CoreDemo4.Areas.Admin.Controllers
             var value = cm.GetList();
             return View(value);
         }
+
         #region AddCategory
         public IActionResult AddCategory()
         {
@@ -51,9 +52,6 @@ namespace CoreDemo4.Areas.Admin.Controllers
         }
         #endregion
 
-
-
-
         #region DeletCategory
         [HttpGet]
         public IActionResult DeletCategory(int id)
@@ -73,6 +71,7 @@ namespace CoreDemo4.Areas.Admin.Controllers
             return RedirectToAction("Index", "Category");
         }
         #endregion
+
         #region DeletBlog
 
 

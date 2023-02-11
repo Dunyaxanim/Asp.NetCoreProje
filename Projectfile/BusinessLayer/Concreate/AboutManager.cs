@@ -24,7 +24,6 @@ namespace BusinessLayer.Concreate
 
         public List<About> GetList()
         {
-            
             return _aboutDal.GetListAll();
         }
 

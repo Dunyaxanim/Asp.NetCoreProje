@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X0cB2JL1ZGqJ2gNY3A2+ZHnVfIl51TpffzZuFt4IZ+3LknEzm5Ud02tXOZrNwFoc89dnHNOUNtyzIaS+ld5unA==",
+  "dgSpecHash": "pZkSJE6YotQPkm4/UdHzAzBS/1UY5oTSiYu/lWGghbK9cCMOQ6QTePCzHuuXpzjJf6TEfty6AQVPaNM/LtAckA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\BlogAPIDemo\\BlogAPIDemo.csproj",
+  "projectFilePath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\BlogAPIDemo\\BlogAPIDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Dunya - PC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

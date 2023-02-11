@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-//using DataAccessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concreate;
 using System;
 using System.Collections.Generic;
@@ -12,21 +12,19 @@ namespace BusinessLayer.Concreate
 
     public class MessageManager : IMessageService
     {
-        //IMessageDal _messageDal;
-        //public MessageManager(IMessageDal messageDal)
-        //{
-        //    _messageDal = messageDal;
-        //}
+        IMessageDal _messageDal;
+        public MessageManager(IMessageDal messageDal)
+        {
+            _messageDal = messageDal;
+        }
         public List<Message> GetList()
         {
-            throw new NotImplementedException();
-            //return _messageDal.GetListAll();
+            return _messageDal.GetListAll();
         }
 
         public List<Message> GetInboxListByWriter(string p)
         {
-            throw new NotImplementedException();
-            //return _messageDal.GetListAll(x => x.Reciver == p);
+            return _messageDal.GetListAll(x => x.Reciver == p);
         }
 
         public void TAdd(Message t)

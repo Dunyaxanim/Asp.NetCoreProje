@@ -1,5 +1,5 @@
 ﻿
-@model List<Blog>
+@model Blog
 @{
     ViewData["Title"] = "BlogReadAll";
     Layout = "~/Views/Shared/UserLayout.cshtml";
@@ -13,58 +13,64 @@
     <section class="banner-bottom">
         <!--/blog-->
         <div class="container">
-            <div class="row"> 
+            <div class="row inner-sec">
                 <!--left-->
                 <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
-                    @foreach (var item in Model)
-                    {
-                        <div class="blog-grid-top">
-                            <div class="b-grid-top">
-                                <div class="blog_info_left_grid">
-                                    <a href="single.html">
-                                        <img src="~/CoreBlogTema/images/@item.BlogImage" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-info-middle">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MM-yyyy"));
-                                            </a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-                                                <i class="far fa-thumbs-up"></i> 0 Likes
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="far fa-comment"></i> 0 Comments
-                                            </a>
-                                        </li>
 
-                                    </ul>
-                                </div>
+                    <div class="blog-grid-top">
+                        <div class="b-grid-top">
+                            <div class="blog_info_left_grid">
+                                <a href="single.html">
+                                    <img src="~/CoreBlogTema/images/@Model.BlogImage" class="img-fluid" alt="">
+                                </a>
                             </div>
+                            <div class="blog-info-middle">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="far fa-calendar-alt"></i> @(((DateTime)Model.BlogCreateDate).ToString("dd-MM-yyyy"));
+                                        </a>
+                                    </li>
+                                    <li class="mx-2">
+                                        <a href="#">
+                                            <i class="far fa-thumbs-up"></i> 0 Beğeniler
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="far fa-comment"></i>  @ViewBag.count Yorumlar
+                                        </a>
+                                    </li>
 
-                            <h3>
-                                <a href="single.html">@item.BlogTitle </a>
-                            </h3>
-                            <p>
-                                @item.BlogContent
-                            </p>
-                            <a asp-action="Index" class="btn btn-primary read-m">Blog Listesi</a>
+                                </ul>
+                            </div>
                         </div>
-                    }
 
+                        <h3>
+                            <a href="single.html">@Model.BlogTitle </a>
+                        </h3>
+                        <p>
+                            @Model.BlogContent
+                        </p>
+                        <a asp-action="Index" class="btn btn-primary read-m">Blog Listesi</a>
+                        <div class="comment-top">
+                            <h4>Yorum Yapın</h4>
+                            <div class="comment-bottom">
+                                <form asp-action="Comment" method="post" asp-route-id="@Model.BlogID">
+                                    <input class="form-control" type="text" name="CommentTitle" placeholder="Konu" required="">
+                                    <textarea class="form-control" name="CommentContent" placeholder="Yorumunuz..." required=""></textarea>
+                                    <button type="submit" class="btn btn-primary submit">Yorum yap</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <br />
+
+
+                    </div>
+                    @await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.i })
                     @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
-
-
-                    @*@await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.i })*@
-
-                    @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
-
-
+                    @*@await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")*@
                 </div>
 
                 <!--//left-->
@@ -78,7 +84,7 @@
                         @await Component.InvokeAsync("CategoryList")
                         @await Component.InvokeAsync("WriterLastBlog")
 
-                        <div class="single-gd my-5 tech-btm">
+                        @*<div class="single-gd my-5 tech-btm">
                             <h4>Our Progress</h4>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0"
@@ -100,8 +106,9 @@
                                 <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                                      aria-valuemax="100"></div>
                             </div>
-                        </div>
-                        <div class="single-gd tech-btm">
+                        </div>*@
+
+                        @*<div class="single-gd tech-btm">
                             <h4>Son eklenen Post</h4>
                             <div class="blog-grids">
                                 <div class="blog-grid-left">
@@ -117,33 +124,33 @@
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                        </div>
+                        </div>*@
                     </div>
 
                 </aside>
                 <!--//right-->
             </div>
         </div>
-        </section>
+    </section>
 </body>
 </html>
-@*@section Scripts{
-    <script>
-    $(document).ready(function () {
-        $("#submitButton").click(function (event) {
-            $.ajax(
-            {
-                url: $("form").attr("action"),
-                data: $("form").serialize(),
-                dataType: "json",
-                success: function (data) {
-                    if (data == 'your error code or message')
-                         alert('Wrong login/password');
-                }
+@section Scripts{
+        <script>
+        $(document).ready(function () {
+            $("#submitButton").click(function (event) {
+                $.ajax(
+                {
+                    url: $("form").attr("action"),
+                    data: $("form").serialize(),
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 'your error code or message')
+                             alert('Wrong login/password');
+                    }
+                });
+                // Avoid to post 2 times.
+                event.preventDefault();
             });
-            // Avoid to post 2 times.
-            event.preventDefault();
         });
-    });
-    </script>
-}*@
+        </script>
+    }

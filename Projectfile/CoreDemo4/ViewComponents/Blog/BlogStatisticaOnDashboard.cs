@@ -15,7 +15,7 @@ namespace CoreDemo4.ViewComponents.Blog
         public IViewComponentResult Invoke()
         {
             ViewBag.CountBlog = bm.TGetCount();
-            ViewBag.CountBlogbyWriter = bm.GetBlogCountByWriterID(5);
+            //ViewBag.CountBlogbyWriter = bm.GetBlogCountByWriterID(5);
             ViewBag.CountCategory = cm.TGetCount();
             return View();
         }

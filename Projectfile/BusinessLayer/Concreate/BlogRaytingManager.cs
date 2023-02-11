@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-//using DataAccessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concreate;
 using System;
 using System.Collections.Generic;
@@ -11,16 +11,15 @@ namespace BusinessLayer.Concreate
 {
     class BlogRaytingManager : IBlogRaytingService
     {
-        //IBlogRaytingDal _blogRaytingDal;
-        //public BlogRaytingManager(IBlogRaytingDal blogRaytingDal)
-        //{
-        //    _blogRaytingDal = blogRaytingDal;
-        //}
+        IBlogRaytingDal _blogRaytingDal;
+        public BlogRaytingManager(IBlogRaytingDal blogRaytingDal)
+        {
+            _blogRaytingDal = blogRaytingDal;
+        }
 
         public List<BlogRayting> GetList()
         {
-            throw new NotImplementedException();
-           // return _blogRaytingDal.GetListAll();
+            return _blogRaytingDal.GetListAll();
         }
 
         public void TAdd(BlogRayting t)

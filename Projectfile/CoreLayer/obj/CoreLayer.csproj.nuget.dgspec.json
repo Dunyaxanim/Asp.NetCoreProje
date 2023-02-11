@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\CoreLayer.csproj": {}
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\CoreLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\CoreLayer.csproj": {
+    "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\CoreLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\CoreLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\CoreLayer.csproj",
         "projectName": "CoreLayer",
-        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\CoreLayer.csproj",
+        "projectPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\CoreLayer.csproj",
         "packagesPath": "C:\\Users\\Dunya - PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\CoreDemo4\\Projectfile\\CoreLayer\\obj\\",
+        "outputPath": "C:\\Users\\Dunya - PC\\source\\repos\\AspNetCoreProject\\ProjectAspNet\\CoreDemo4\\CoreLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

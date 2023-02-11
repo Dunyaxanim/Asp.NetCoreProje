@@ -22,15 +22,16 @@
                 <div class="card-body">
                     <h4 class="card-title">Basic Table</h4>
                     <a asp-action="AddBlog" class="btn btn-primary">Yeni Blog yarat</a>
+
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>BlogID</th>
                                 <th>Başlık</th>
                                 <th>Yaranma tarihi</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Actions</th>
+                                <th>Kategori</th>
+                                <th>Aktif/Pasif</th>
+                                <th>Fonksiyonlar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,11 +45,11 @@
                                     <td>
                                         @if (!item.BlogStatus)
                                         {
-                                            <span class="text-success">Aktiv</span>
+                                            <span class="text-success">Aktif</span>
                                         }
                                         else
                                         {
-                                            <span class="text-danger">Deaktiv</span>
+                                            <span class="text-danger">Pasif</span>
                                         }
                                     </td>
                                     <td>
@@ -64,13 +65,13 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Blog silmək</h5>
+                                                            <h5 class="modal-title" id="exampleModalLabel">Blog silme</h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <h4>Bu blog'u silmək istediyinizə əminmisiniz?</h4>
+                                                            <h4>Bu bloğ'u silmek istediyinize eminmisiniz?</h4>
 
                                                         </div>
                                                         <div class="modal-footer">

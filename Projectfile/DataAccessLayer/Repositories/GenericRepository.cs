@@ -55,6 +55,10 @@ namespace DataAccessLayer.Repositories
             return c.Set<T>().Count();
         }
 
-        
+        public int GetCount(int id)
+        {
+            using var c = new Context();
+            return c.Set<T>().Count();
+        }
     }
 }

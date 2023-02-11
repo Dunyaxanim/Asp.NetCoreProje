@@ -26,6 +26,7 @@ namespace CoreDemo4.Areas.Admin.ViewComponents.Statistics
             string connection = "https://api.openweathermap.org/data/2.5/weather?q=baki&mode=xml&laang=tr&units=matric&appid=" + api;
             XDocument document = XDocument.Load(connection);
             var dgree = document.Descendants("temperature").ElementAt(0).Attribute("value").Value;
+           
             ViewBag.Weather = dgree;
             return View();
         }

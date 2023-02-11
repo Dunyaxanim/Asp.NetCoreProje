@@ -18,5 +18,7 @@ namespace EntityLayer.Concreate
         public bool CommentStatus { get; set; }
         public int BlogID { get; set; }
         public Blog Blog { get; set; }
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
     }
 }

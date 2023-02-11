@@ -13,7 +13,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-7563H9T;database=CoreBlogDb2; integrated security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-7563H9T;database=CoreBlogDb3; integrated security=true;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,8 +30,6 @@ namespace DataAccessLayer.Concrete
                 .OnDelete(DeleteBehavior.ClientSetNull);
             base.OnModelCreating(modelBuilder);
         }
-
-
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -43,6 +41,5 @@ namespace DataAccessLayer.Concrete
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Message2> Message2s { get; set; }
-        public DbSet<Admin> Admins { get; set; }
     }
 }

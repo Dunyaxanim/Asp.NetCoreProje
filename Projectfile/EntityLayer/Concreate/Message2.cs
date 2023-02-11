@@ -20,5 +20,12 @@ namespace EntityLayer.Concreate
         public Writer SenderUser { get; set; }
         public Writer ReceiverUser { get; set; }
 
+
+        [Required(ErrorMessage = "Mail ünvanı daxil edin.")]
+        public string To { get; set; }
+        public string Body { get; set; }
+
+
+
     }
 }

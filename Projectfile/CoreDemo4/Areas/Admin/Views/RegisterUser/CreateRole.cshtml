@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concreate.AppRole
+@{
+    ViewData["Title"] = "CreateRole";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin2Layout.cshtml";
+}
+
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yeni Blog</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                @using (Html.BeginForm("CreateRole", "RegisterUser", FormMethod.Post))
+                {
+                    <div cl ass="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Rol adı daxil edin</label>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Name)
+                        </div>
+                    </div>
+                    @*<select class="form-control" name="sellectecontroller">
+                        <label>Yaradılacaq şəxsin rolunu müəyyənləşdirin</label>
+                        @foreach (AppRole role in ViewBag.Roles)
+                        {
+                            <option selected value="@role.Name">@role.Name</option>
+                        }
+                    </select>*@
+
+
+                    <button type="submit" class="btn btn-primary submit mb-4">Daxil et</button>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
